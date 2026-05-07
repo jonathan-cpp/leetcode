@@ -15,7 +15,7 @@ public:
             x /= 10;
 
             if (reversed > INT_MAX / 10 || (reversed == INT_MAX / 10 && digit > 7))
-                return 0;
+                return false;
 
             // stick that digit onto the end of reversed
             reversed = reversed * 10 + digit;
