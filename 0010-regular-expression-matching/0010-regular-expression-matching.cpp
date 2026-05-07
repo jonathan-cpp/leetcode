@@ -3,7 +3,7 @@ public:
     bool isMatch(string s, string p) {
         //return std::regex_match(s, std::regex(p)); 
         m_memo.clear();
-        return helper(s, p, 0, 0);
+        return helper(s, p, 0, 0); // O(m*n)
     }
 
 private:
