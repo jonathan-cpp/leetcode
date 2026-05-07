@@ -1,7 +1,7 @@
 class Solution {
 public:
     string intToRoman(int num) {
-        std::vector<pair<int, std::string>> romanValues = {
+        std::vector<std::pair<int, std::string>> romanValues = {
             {1000, "M"},
             {900,  "CM"},
             {500,  "D"},
@@ -19,7 +19,7 @@ public:
 
         std::string result = "";
 
-        for (const auto& [value, symbol] : romanValues) {
+        for (auto& [value, symbol] : romanValues) {
             while (num >= value) {
                 result += symbol;
                 num -= value;
