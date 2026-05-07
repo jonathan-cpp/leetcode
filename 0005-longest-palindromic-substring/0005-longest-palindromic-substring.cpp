@@ -5,11 +5,12 @@ public:
 
         for (int i = 0; i < s.size(); i++) {
             string odd  = expand(s, i, i);
-            string even = expand(s, i, i+1);
+            string even = expand(s, i, i + 1);
 
             if(odd.length() > longest.length()) longest = odd;
             if(even.length() > longest.length()) longest = even;
         }
+
         return longest;
     }
 
@@ -19,6 +20,7 @@ private:
             left--;
             right++;
         }
+        
         return s.substr(left + 1, right - left - 1);
     }
 };
