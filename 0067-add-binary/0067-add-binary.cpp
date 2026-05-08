@@ -19,7 +19,7 @@ public:
             if (j >= 0) { sum += b[j--] - '0'; }
 
             carry = sum / 2;
-            result += (char)('0' + sum % 2);
+            result += static_cast<char>('0' + sum % 2);
         }
 
         std::reverse(result.begin(), result.end());
