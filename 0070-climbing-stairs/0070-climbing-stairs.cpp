@@ -8,8 +8,8 @@ public:
         // Simplified version of Binet's formula — O(1) time  O(1) space,
         // psi^n / sqrt(5) is always less than 0.5, which means std::round absorbs it
         // loses precision for n > 70 due to floating point
-        double phi = (1.0 + sqrt(5.0)) / 2.0;
-        return static_cast<int>(round(pow(phi, n + 1) / sqrt(5.0)));
+        double phi = (1.0 + std::sqrt(5.0)) / 2.0;
+        return static_cast<int>(std::round(std::pow(phi, n + 1) / std::sqrt(5.0)));
     }
 
 private:
